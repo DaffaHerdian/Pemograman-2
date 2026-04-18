@@ -1,0 +1,86 @@
+/**
+ * Class Mahasiswa
+ * Berfungsi sebagai cetakan/blueprint
+ */
+class Mahasiswa {
+    // Attribute (Variable)
+    // Disarankan menggunakan private untuk enkapsulasi yang baik
+    private String nim, nama, grade;
+    private float uts, uas; 
+    private double nilaiakhir;
+
+    // Method Mutator (Setter)
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public void setUts(float uts) {
+        this.uts = uts;
+    }
+
+    public void setUas(float uas) {
+        this.uas = uas;
+    }
+
+    // Method Accessor (Getter)
+    public String getNim() {
+        return nim;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    // Method untuk perhitungan Nilai Akhir
+    public double getNilaiAkhir() {
+        this.nilaiakhir = (uts + uas) / 2;
+        return nilaiakhir;
+    }
+
+    // Method untuk menentukan grade
+    public String getGrade() {
+        // Memastikan nilaiakhir sudah dihitung sebelum menentukan grade
+        if (this.nilaiakhir < 50) {
+            grade = "E";
+        } else if (this.nilaiakhir < 60) {
+            grade = "D";
+        } else if (this.nilaiakhir < 70) {
+            grade = "C";
+        } else if (this.nilaiakhir < 80) {
+            grade = "B";
+        } else {
+            grade = "A";
+        }
+        return grade;
+    }
+}
+
+/**
+ * Class Utama
+ * Simpan file dengan nama: MainMahasiswa.java
+ */
+public class MainMahasiswa {
+    public static void main(String[] args) {
+        // Membuat Object
+        Mahasiswa mhs = new Mahasiswa();
+
+        // Mengisi data
+        mhs.setNim("1634");
+        mhs.setNama("Ahmad Daffa Herdian");
+        mhs.setUts(90);
+        mhs.setUas(75);
+
+        // Menampilkan output
+        System.out.println("======= DATA NILAI MAHASISWA =======");
+        System.out.println("NIM          : " + mhs.getNim());
+        System.out.println("Nama         : " + mhs.getNama());
+        // Memanggil Nilai Akhir terlebih dahulu agar variabel nilaiakhir terisi
+        System.out.println("Nilai Akhir  : " + mhs.getNilaiAkhir());
+        System.out.println("Grade        : " + mhs.getGrade());
+        System.out.println("====================================");
+    }
+}
