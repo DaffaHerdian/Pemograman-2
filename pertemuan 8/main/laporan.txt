@@ -1,0 +1,3 @@
+===== LAPORAN DATA MAHASISWA =====
+NIM		NAMA		SEMESTER
+231011401634 - Ahmad Daffa Herdian - 6
