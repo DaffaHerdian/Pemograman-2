@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class DataMahasiswa {
+    public static void main(String[] args) {
+        // Gunakan System.in (tanpa .util)
+        Scanner input = new Scanner(System.in);
+
+        // Bagian Input
+        System.out.println("run:");
+        System.out.println("data:");
+        
+        System.out.print("nim: ");
+        String nim = input.nextLine();
+        
+        System.out.print("nama: ");
+        String nama = input.nextLine();
+        
+        System.out.print("nilai UTS: ");
+        double uts = input.nextDouble();
+        
+        System.out.print("nilai UAS: ");
+        double uas = input.nextDouble();
+
+        // Logika Perhitungan
+        double rata2 = (uts + uas) / 2;
+
+        // Logika Penentuan Grade
+        String grade;
+        if (rata2 >= 80) {
+            grade = "A";
+        } else if (rata2 >= 75) {
+            grade = "B";
+        } else if (rata2 >= 60) {
+            grade = "C";
+        } else {
+            grade = "D";
+        }
+
+        // Bagian Output Tabel
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.printf("%-10s %-15s %-10s %-10s %-10s %-10s %n", "Nim", "Nama", "UTS", "UAS", "Rata2", "Grade");
+        System.out.println("-----------------------------------------------------------------------");
+        
+        // %-10s = String rata kiri lebar 10, %-10.1f = angka desimal 1 angka di belakang koma
+        System.out.printf("%-10s %-15s %-10.1f %-10.1f %-10.1f %-10s %n", nim, nama, uts, uas, rata2, grade);
+        
+        System.out.println("\nBUILD SUCCESSFUL (total time: 12 seconds)");
+        
+        input.close();
+    }
+}
