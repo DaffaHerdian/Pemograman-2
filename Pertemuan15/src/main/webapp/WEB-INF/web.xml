@@ -1,0 +1,1 @@
+<web-app version='4.0' xmlns='http://xmlns.jcp.org/xml/ns/javaee'><servlet><servlet-name>NilaiController</servlet-name><servlet-class>com.unpam.controller.NilaiController</servlet-class></servlet><servlet-mapping><servlet-name>NilaiController</servlet-name><url-pattern>/NilaiController</url-pattern></servlet-mapping></web-app>

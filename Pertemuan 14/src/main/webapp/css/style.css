@@ -1,0 +1,8 @@
+body{font-family:Arial;margin:0;background:#0f172a;color:white;}
+.header{background:#111827;padding:20px;text-align:center;}
+.container{display:flex;height:90vh;}
+.sidebar{width:220px;background:#1e293b;padding:20px;}
+.sidebar a{display:block;color:white;padding:12px;text-decoration:none;margin:8px 0;background:#334155;border-radius:6px;}
+.content{flex:1;padding:30px;}
+input,button{padding:10px;width:300px;border-radius:6px;border:none;margin:5px 0;}
+button{background:#2563eb;color:white;}
