@@ -1,1 +1,0 @@
-taruh mysql connector jar
