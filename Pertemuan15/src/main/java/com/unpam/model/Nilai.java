@@ -1,1 +1,0 @@
-package com.unpam.model; public class Nilai{}

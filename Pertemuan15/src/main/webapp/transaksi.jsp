@@ -1,1 +1,0 @@
-<html><body><form action='NilaiController' method='post'>NIM<input name='nim'><input type='submit'></form></body></html>
