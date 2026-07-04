@@ -1,0 +1,4 @@
+com\uas\hotel\model\Reservasi.class
+com\uas\hotel\repository\ReservasiRepository.class
+com\uas\hotel\HotelApplication.class
+com\uas\hotel\controller\ReservasiController.class
